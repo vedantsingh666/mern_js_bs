@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TASK5</title>
+  <style>
+    .row{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .row input,textarea{
+        margin-left: 30px;
+    }
+  </style>
+</head>
+<body>
+    <center>
+        <form id>
+            <div class = "row">Name: <input type="text" id = "Name"><span id = "nerr" style = "color: red;"></span></div>
+            <div class = "row">Email: <input type="text" id = "Email"><span id = "err" style = "color: red;"></span></div>
+            <div class = "row">Website: <input type="text" id = "Site"><span id = "werr" style = "color: red;"></span></div>
+            <div class = "row">Message: <textarea id = "msg"></textarea><span id = "merr" style = "color: red;"></span></div>
+            <div class="row"><button type = "button" onclick = "validate()">Submit</button></div>
+        </form>
+    </center>
+    <script>
+        function validate(){
+            var Name = document.getElementById("Name");
+            var Email = document.getElementById("Email");
+            var Site = document.getElementById("Site");
+            var msg = document.getElementById("msg");
+
+            if (Name.value == "") {
+                Name.style.borderColor = "red";
+                document.getElementById("nerr").innerHTML = "This field is required!!";
+            }
+            if (Email.value == "") {
+                Email.style.borderColor = "red";
+                document.getElementById("err").innerHTML = "A valid Email address is required!!";
+            }
+            if (Email.value.indexOf('@')==-1) {
+                Email.style.borderColor = "red";
+                document.getElementById("err").innerHTML = "A valid Email address is required!!";
+            }
+            if (Site.value == "") {
+                Site.style.borderColor = "red";
+                document.getElementById("werr").innerHTML = "A valid URL is required!!";
+            }
+            if (Site.value.indexOf(".")==-1) {
+                Site.style.borderColor = "red";
+                document.getElementById("werr").innerHTML = "A valid URL is required!!";
+            }
+            if (msg.value == "") {
+                msg.style.borderColor = "red";
+                document.getElementById("merr").innerHTML = "This field is required!!";
+            }
+        }
+    </script>
+</body>
+</html>
+

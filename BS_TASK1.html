@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .blue-background {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .navbar {
+            background-color: #333;
+            border-bottom: 3px solid #007BFF;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #007BFF;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 40px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .right-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .right-section h2 {
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        /* Override Bootstrap default styles */
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with blue background -->
+    <header class="blue-background">
+        <div class="container">
+            <h1 class="display-4">Ethnus Layout</h1>
+        </div>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" 
+                data-toggle="collapse" data-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Signup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <section class="section">
+                    <h2>Main Content</h2>
+                    <p>Write Your Content here.</p>
+                </section>
+            </div>
+            <div class="col-lg-4">
+                <div class="right-section bg-dark text-white">
+                    <h2>Right Section</h2>
+                    <p>This is a section on the right side of the page. You can place additional content or widgets here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to Bootstrap JS and jQuery (for Bootstrap functionality) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

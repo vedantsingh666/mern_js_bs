@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TASK7</title>
+  <style>
+    #movingImage {
+      position: relative;
+      left: 0;
+      top: 0;
+    }
+
+    .buttons-container {
+      display: flex;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="movingImageContainer">
+    <img id="movingImage" src="https://clipart-library.com/data_images/269494.jpg" alt="Moving Image">
+  </div>
+
+  <div class="buttons-container">
+    <button id="startBtn">Start</button>
+    <button id="stopBtn">Stop</button>
+  </div>
+
+  <script>
+    var intervalId;
+    var moveDistance = 10; // Adjust the movement distance as needed
+
+    var startBtn = document.getElementById("startBtn");
+    var stopBtn = document.getElementById("stopBtn");
+    var movingImage = document.getElementById("movingImage");
+
+    startBtn.addEventListener("click", function() {
+      clearInterval(intervalId); // Clear any previous interval
+
+      intervalId = setInterval(function() {
+        var currentLeft = parseInt(movingImage.style.left) || 0;
+        movingImage.style.left = currentLeft + moveDistance + "px";
+      }, 100);
+    });
+
+    stopBtn.addEventListener("click", function() {
+      clearInterval(intervalId);
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
